@@ -1,0 +1,14 @@
+<%= form_for @user do |u| %>
+<%= u.label :name %>
+<%= u.text_field :name %>
+</br>
+<%= u.label :post %>
+<%= u.text_area :post %>
+</br>
+<%= u.submit %>
+<% end %>
+
+<% @users.each do |w| %>
+<h3><%= w.name %></h3>
+<p><%= w.post %></p>
+<% end %>
