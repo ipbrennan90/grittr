@@ -11,8 +11,12 @@
 
 <%= u.submit "Post Me!" %>
 <% end %>
+<div class= "container">
 
-<% @users.each do |w| %>
+<% time_users=@users.order('created_at desc')%>
+<% time_users.each do |w| %>
 <h3><%= w.name %></h3>
+<h4><%= w.created_at %></h4>
 <p><%= w.post %></p>
 <% end %>
+</div>
