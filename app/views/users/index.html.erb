@@ -1,15 +1,14 @@
 
 <%= form_for @user do |u| %>
 <div class="input-group">
-  <span class="input-group-addon" id="basic-addon1">@</span>
-  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+  <span class="input-group-addon" id="basic-addon1">Name</span>
+  <%=  u.text_field :name%>
 </div>
-<%= u.label :name %>
-<%= u.text_field :name %>
-</br>
-<%= u.label :post %>
-<%= u.text_area :post %>
-</br>
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">Post</span>
+  <%=  u.text_area :post%>
+</div>
+
 <%= u.submit "Post Me!" %>
 <% end %>
 
